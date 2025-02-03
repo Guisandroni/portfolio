@@ -11,7 +11,7 @@ export function Bagcoin(){
         className="bg-white dark:bg-[#121212] rounded-xl overflow-hidden border border-purple-100 dark:border-purple-900/20 hover:scale-105 transition-all duration-300"
       >
         <img
-          src="./src/docs/img/bagcoin.PNG"
+          src="https://github.com/Guisandroni/bagcoin/raw/main/doc/bagcoin.PNG"
           alt={`Project `}
           className="object-cover w-1xl h-48 justify-self-center"
         />
