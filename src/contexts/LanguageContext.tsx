@@ -14,11 +14,29 @@ type Translations = {
     aboutMe: string;
     aboutText1: string;
     aboutText2: string;
-    projectTitle: string;
-    projectDescription: string;
+
+    MarketItems: string,
+    DescriptionMarketItems: string,
+    
+    TripInvites: string,
+   DescriptionTripInvites:string,
+
+    BagCoin: string,
+    DescriptionBagCoin: string,
+
+    Pomodoro: string,
+    DescriptionPomodoro: string,
+
+    ApiRest: string,
+    DescriptionApiRest: string,
+
+
     liveDemo: string;
     repository: string;
     copyright: string;
+   
+    
+
   };
 };
 
@@ -29,13 +47,28 @@ const translations: Translations = {
     projects: 'Projects',
     downloadCV: 'Download CV',
     contactMe: 'Contact Me',
-    role: "I'm Developer Full Stack",
-    university: 'university Ads Fatec',
+    role: "Developer Full Stack",
+    university: 'Systems Analysis and Development studentt with a passion for technology and programming',
     aboutMe: 'About Me',
     aboutText1: "Hello! I'm a passionate Full Stack Developer with experience in building web applications using modern technologies. I love creating elegant solutions to complex problems and am always eager to learn new technologies.",
     aboutText2: "Currently studying at Fatec, I'm constantly improving my skills and staying up-to-date with the latest trends in web development.",
-    projectTitle: 'Project Title',
-    projectDescription: 'A brief description of the project and the technologies used in its development.',
+    
+    MarketItems: 'MarketItems',
+    DescriptionMarketItems: 'Website to list and add products',
+    
+    TripInvites: 'TripInvites',
+   DescriptionTripInvites: 'API for travel registration',
+
+    BagCoin: 'BagCoin',
+    DescriptionBagCoin: 'Financial platform and expense control',
+
+    Pomodoro: 'Pomodoro',
+    DescriptionPomodoro: 'Projeto para calcular tempo de estudo',
+   
+   
+    ApiRest: "ApiRest",
+    DescriptionApiRest: "Api rest para controle ",
+
     liveDemo: 'Live Demo',
     repository: 'Repository',
     copyright: '© 2024 Gui Sandroni. All rights reserved.',
@@ -47,14 +80,32 @@ const translations: Translations = {
     downloadCV: 'Baixar CV',
     contactMe: 'Contato',
     role: 'Desenvolvedor Full Stack',
-    university: 'Universidade Ads Fatec',
+    university: 'Estudante de Análise e Desenvolvimento de Sistemas, apaixonado por tecnologia e programação',
     aboutMe: 'Sobre Mim',
-    aboutText1: 'Olá! Sou um Desenvolvedor Full Stack apaixonado com experiência na construção de aplicações web usando tecnologias modernas. Adoro criar soluções elegantes para problemas complexos e estou sempre ansioso para aprender novas tecnologias.',
-    aboutText2: 'Atualmente estudando na Fatec, estou constantemente aprimorando minhas habilidades e me mantendo atualizado com as últimas tendências em desenvolvimento web.',
-    projectTitle: 'Título do Projeto',
-    projectDescription: 'Uma breve descrição do projeto e das tecnologias utilizadas em seu desenvolvimento.',
+    aboutText1: 'Olá! Sou um Desenvolvedor Full Stack apaixonado com experiência na construção de aplicações web. Adoro criar soluções elegantes para problemas complexos e estou sempre ansioso para aprender novas tecnologias.',
+    aboutText2: 'Cursando Análise e Desenvolvimento de Sistemas na Fatec Sorocaba, estou constantemente aprimorando minhas habilidades e me mantendo atualizado com as últimas tendências em desenvolvimento web.',
+    
+    
+    MarketItems: 'MarketItems',
+    DescriptionMarketItems: 'WebSite para listar e adicionar produtos',
+    
+    TripInvites: 'TripInvites',
+   DescriptionTripInvites: 'API para registro de viagens',
+
+    BagCoin: 'BagCoin',
+    DescriptionBagCoin: 'Plataforma financeira e controle de gastos',
+
+    Pomodoro: 'Pomodoro',
+    DescriptionPomodoro: 'Projeto para calcular tempo de estudo',
+
+    
+    ApiRest: "ApiRest",
+    DescriptionApiRest: "Api rest para controle ",
+
     liveDemo: 'Demo ao Vivo',
     repository: 'Repositório',
+
+
     copyright: '© 2024 Gui Sandroni. Todos os direitos reservados.',
   }
 };

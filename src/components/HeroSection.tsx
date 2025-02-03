@@ -4,8 +4,16 @@ import { useLanguage } from '../contexts/LanguageContext';
 
 export function HeroSection() {
 const { t } = useLanguage();
-    return(
+const crc = "./src/docs/CrcGuilherme.pdf"
+const email = "gui.sandroni@gmail.com"
 
+const handleEmailSend= () =>{
+  window.location.href = `mailto:${email}`
+}
+
+
+    return(
+      
         <section className="relative flex items-center justify-center min-h-screen py-20 overflow-hidden">
         <div className="container px-6 mx-auto">
           <div className="flex flex-col items-center gap-8 md:flex-row md:gap-16">
@@ -19,30 +27,34 @@ const { t } = useLanguage();
             </div>
             <div className="space-y-6 text-center md:text-left animate-fade-in">
               <h1 className="text-5xl font-bold text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text">
-                Gui Sandroni
+                Guilherme Sandroni Dias
               </h1>
               <p className="text-2xl text-purple-600 dark:text-purple-400">{t('role')}</p>
               <p className="text-gray-600 dark:text-gray-400">{t('university')}</p>
               <div className="flex flex-wrap justify-center gap-4 md:justify-start">
-                <button className="flex items-center gap-2 px-6 py-3 text-white transition-shadow rounded-full bg-gradient-to-r from-purple-600 to-pink-600 hover:shadow-lg hover:shadow-purple-500/20">
-                  <Download size={20} />
+                <button  className="flex items-center gap-2 px-6 py-3 cursor-pointer text-white transition-shadow rounded-full bg-gradient-to-r from-purple-600 to-pink-600 hover:shadow-lg hover:shadow-purple-500/20">
+                  
+                  <a href={crc} className='flex gap-2'>
+                    <Download size={20}  />
                   {t('downloadCV')}
+                  </a>
                 </button>
-                <button className="flex items-center gap-2 px-6 py-3 text-purple-600 transition-colors border-2 border-purple-600 rounded-full dark:text-purple-400 hover:bg-purple-600/20">
+                <button onClick={()=> handleEmailSend()} className="flex items-center gap-2 px-6 py-3 cursor-pointer text-purple-600 transition-colors border-2 border-purple-600 rounded-full dark:text-purple-400 hover:bg-purple-600/20">
                   <Mail size={20} />
                   {t('contactMe')}
+                 
+                  
                 </button>
               </div>
               <div className="flex justify-center gap-4 mt-6 md:justify-start">
-                <a href="#" className="p-3 text-purple-600 transition-colors border-2 border-purple-600 rounded-full dark:text-purple-400 hover:bg-purple-600/20">
-                  <Github size={24} />
+                <a href="https://github.com/Guisandroni" className="p-3 text-purple-600 transition-colors border-2 border-purple-600 rounded-full dark:text-purple-400 hover:bg-purple-600/20">
+                  <Github  size={24} />
                 </a>
-                <a href="#" className="p-3 text-purple-600 transition-colors border-2 border-purple-600 rounded-full dark:text-purple-400 hover:bg-purple-600/20">
+                <a href="https://www.linkedin.com/in/guisandroni/" className="p-3 text-purple-600 transition-colors border-2 border-purple-600 rounded-full dark:text-purple-400 hover:bg-purple-600/20">
                   <Linkedin size={24} />
                 </a>
-                <a href="#" className="p-3 text-purple-600 transition-colors border-2 border-purple-600 rounded-full dark:text-purple-400 hover:bg-purple-600/20">
-                  <Mail size={24} />
-                </a>
+                
+                
               </div>
             </div>
           </div>

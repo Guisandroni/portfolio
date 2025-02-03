@@ -1,5 +1,5 @@
-import { ExternalLink, Github } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
+import { Itens } from "./itens";
 
 
 export function Projects(){
@@ -9,11 +9,12 @@ export function Projects(){
 
         <section id="projects" className="py-32 bg-gray-50 dark:bg-[#1a1a1a]">
         <div className="container px-6 mx-auto">
-          <h2 className="mb-16 text-4xl font-bold text-center text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text">
+          <h2 className="mb-16 text-4xl font-bold text-center  bg-gradient-to-r text-purple-600 bg-clip-text">
             {t('projects')}
           </h2>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {[1, 2, 3].map((project) => (
+
+          {/* <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {[1, 2, 3,4,5,6].map((project) => (
               <div
                 key={project}
                 className="bg-white dark:bg-[#121212] rounded-xl overflow-hidden border border-purple-100 dark:border-purple-900/20 hover:scale-105 transition-all duration-300"
@@ -45,7 +46,9 @@ export function Projects(){
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
+  <Itens/>
+  
         </div>
       </section>
     )
