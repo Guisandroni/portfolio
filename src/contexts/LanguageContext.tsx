@@ -30,6 +30,9 @@ type Translations = {
     ApiRest: string,
     DescriptionApiRest: string,
 
+    Movie:string,
+    DescriptionMovie:string
+
 
     liveDemo: string;
     repository: string;
@@ -69,6 +72,9 @@ const translations: Translations = {
     ApiRest: "ApiRest",
     DescriptionApiRest: "Api rest para controle ",
 
+    Movie:"Movies Page",
+    DescriptionMovie:"Page to list movies using API",
+
     liveDemo: 'Live Demo',
     repository: 'Repository',
     copyright: '© 2024 Gui Sandroni. All rights reserved.',
@@ -101,6 +107,9 @@ const translations: Translations = {
     
     ApiRest: "ApiRest",
     DescriptionApiRest: "Api rest para controle ",
+
+    Movie:"Página de Filmes",
+    DescriptionMovie:"Página para listar filmes usando API",
 
     liveDemo: 'Demo ao Vivo',
     repository: 'Repositório',

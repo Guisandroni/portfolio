@@ -2,6 +2,7 @@
 import { MarketItems } from "./projects/marketItems";
 import { TripInvites } from "./projects/tripInvites";
 import { Bagcoin } from "./projects/bagcoin";
+import { Movies } from "./projects/movies";
 
 
 export function Itens () {
@@ -13,6 +14,7 @@ export function Itens () {
       <MarketItems/>
       <TripInvites/>
       <Bagcoin />
+      <Movies/>
       
   
   </div>

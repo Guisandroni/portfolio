@@ -12,7 +12,7 @@ function App() {
   // const skills = ['JavaScript', 'TypeScript', 'React', 'Node.js', 'Python', 'SQL', 'Git', 'Docker'];
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#121212] text-gray-900 dark:text-white transition-colors duration-300">
+    <div className="min-h-screen bg-white  dark:bg-[#121212] text-gray-900 dark:text-white transition-colors duration-300">
 
       <Navbar/>
       <HeroSection />
