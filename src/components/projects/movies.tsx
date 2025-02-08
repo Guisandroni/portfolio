@@ -1,4 +1,4 @@
-import { ExternalLink, Github } from "lucide-react";
+import { Github } from "lucide-react";
 import { useLanguage } from "../../contexts/LanguageContext";
 
 export function Movies(){
