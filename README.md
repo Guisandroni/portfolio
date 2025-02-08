@@ -1,50 +1,42 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 👨‍💻 Portfólio Pessoal | Gui Sandroni
 
-Currently, two official plugins are available:
+Olá! Este é o meu portfólio pessoal, onde compartilho meus projetos, experiências e habilidades como desenvolvedor(a). Se você está aqui, provavelmente quer saber mais sobre o que eu faço — então, vamos lá!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 O Que Você Encontrará Aqui?
 
-## Expanding the ESLint configuration
+- **Projetos**: Uma coleção dos meus trabalhos mais relevantes, com descrições e links para explorar.
+- **Habilidades**: As tecnologias e ferramentas que domino e utilizo no meu dia a dia.
+- **Contato**: Informações para você entrar em contato comigo ou me conhecer melhor.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🚀 Tecnologias que Utilizo
 
-- Configure the top-level `parserOptions` property like this:
+Aqui estão algumas das principais tecnologias que uso em meus projetos:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **Frontend**: HTML, CSS, JavaScript, React, TailwindCss, ChackaUi, Mui
+- **Backend**: Node.js, TypeScript
+- **Bancos de Dados**: MySQL, MongoDB, PostgreSQL, SQLite
+- **Ferramentas**: Git, Figma, Httpie
+- 
+## 📂 Estrutura do Projeto
+
+Este repositório contém os arquivos-fonte do meu portfólio. A estrutura é organizada da seguinte forma:
+
+```
+portfolio/
+├── index.html       # Página inicial do portfólio
+├── css/             # Estilos personalizados
+├── js/              # Scripts para interatividade
+├── assets/          # Imagens e outros recursos
+└── README.md        # Este arquivo
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 📄 Licença
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Este projeto está sob a licença [MIT](LICENSE). Isso significa que você pode usá-lo, modificá-lo e distribuí-lo livremente.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+---
+
+**Autor**: Gui Sandroni  
+**GitHub**: [@Guisandroni](https://github.com/Guisandroni) 
+**LinkedIn**: [linkedin.com/in/seu-perfil](https://www.linkedin.com/in/guisandroni/) 
