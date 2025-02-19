@@ -4,7 +4,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 
 export function HeroSection() {
 const { t } = useLanguage();
-const crc = "../public/cv/CrcGuilherme.pdf"
+const crc = "./src/docs/CrcGuilherme.pdf"
 const email = "gui.sandroni@gmail.com"
 
 const handleEmailSend= () =>{
