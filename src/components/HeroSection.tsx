@@ -34,7 +34,7 @@ const handleEmailSend= () =>{
               <div className="flex flex-wrap justify-center gap-4 md:justify-start">
                 <button  className="flex items-center gap-2 px-6 py-3 cursor-pointer text-white transition-shadow rounded-full bg-gradient-to-r from-purple-600 to-pink-600 hover:shadow-lg hover:shadow-purple-500/20">
                   
-                  <a href={crc} download={crc} className='flex gap-2'>
+                  <a href={crc}  className='flex gap-2'>
                     <Download size={20}  />
                   {t('downloadCV')}
                   </a>
