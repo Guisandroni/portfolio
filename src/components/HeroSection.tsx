@@ -19,7 +19,7 @@ const handleEmailSend= () =>{
             <div className="relative group animate-float">
               <div className="absolute inset-0 transition-opacity rounded-full opacity-75 bg-gradient-to-r from-purple-600 to-pink-600 blur-lg group-hover:opacity-100"></div>
               <img
-                src="https://media.licdn.com/dms/image/v2/D4D03AQG0CyRKu5HeaA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1722956322446?e=1744243200&v=beta&t=WDfIwHq-WhCIOPRemv_xjbaPAnGPT0nBT1szq4rYGCE"
+                src="https://media.licdn.com/dms/image/v2/D4D03AQG0CyRKu5HeaA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1722956322446?e=1754524800&v=beta&t=QLZ05pluUa-TBHwA-C8kl1bq4jUvNQuIxhHh2eXbo6o"
                 alt="Profile"
                 className="relative z-10 object-cover w-64 h-64 border-4 border-purple-500 rounded-full"
               />
