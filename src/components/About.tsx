@@ -1,4 +1,4 @@
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '../contexts/translation/LanguageContext';
 
 
 export function About(){

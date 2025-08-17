@@ -1,5 +1,5 @@
 import { ExternalLink, Github } from "lucide-react";
-import { useLanguage } from "../../contexts/LanguageContext";
+import { useLanguage } from "../../contexts/translation/LanguageContext";
 
 export function Bagcoin(){
             const { t } = useLanguage();

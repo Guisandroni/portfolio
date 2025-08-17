@@ -1,5 +1,5 @@
 import { Download, Mail, Github, Linkedin } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '../contexts/translation/LanguageContext';
 import crc from '../../public/cv/CrcGuilherme.pdf'
 
 export function HeroSection() {

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLanguage } from "../contexts/LanguageContext";
+import { useLanguage } from "../contexts/translation/LanguageContext";
 import { LanguageToggle } from "./LanguageToggle";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -13,7 +13,7 @@ export function Navbar() {
 
     return (
         <nav className="fixed top-0 left-0 right-0 z-40 bg-white/80 dark:bg-black/80 backdrop-blur-lg">
-            <div className="container flex flex-col md:flex-row items-center justify-center px-6 py-6 mx-auto">
+            <div className="container flex flex-col items-center justify-center px-6 py-6 mx-auto md:flex-row">
                 <button
                     onClick={toggleMenu}
                     className="md:hidden focus:outline-none"
@@ -66,7 +66,7 @@ export function Navbar() {
                 </ul>
 
             
-                <div className="flex space-x-4 mt-4 md:mt-0">
+                <div className="flex mt-4 space-x-4 md:mt-0">
                     <ThemeToggle />
                     <LanguageToggle />
                 </div>
