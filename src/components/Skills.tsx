@@ -1,58 +1,61 @@
-import { useLanguage } from "../contexts/translation/LanguageContext";
 
 
 export function Skills() {
-  const { t } = useLanguage();
-  const skills = ['JavaScript', 'TypeScript', 'React', 'Node.js', 'Python', 'SQL', 'React Native', 'Express'];
-  // const linguagens =["JavaScript","TypeScript","C","Python","Java","Php"];
-  // const frameworks =["React","ReactNative","Next.js","Node.js","Express","Docker"];
-  // const bancoDados=["SQLite","MySql","MongoDB"];
+  const linguagens = ["typescript", "java",  "nodejs", "spring","docker"];
+  const frameworks = ["html","css","react","tailwind"];
+  const bancoDados = ["mysql","postgresql", "mongodb"];
   return (
 
-    <section id="skills" className="py-32 bg-white dark:bg-[#121212]">
-      <div className="container px-6 mx-auto">
-        <h2 className="mb-6 text-4xl font-bold text-center text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text">
-          {t('skills')}
+    <section id="skills" className="py-22 bg-white dark:bg-[#121212]">
+      <div className="container px-6 mx-auto flex-1 ">
+        <h2 className="mb-6 text-4xl font-bold py-2 text-center text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text">
+          {'Tecnologias'}
         </h2>
-        {/* <p className="text-center text-xl mb-8 font-bold bg-clip-text ">Tecnologias com as quais utilizo ou já tive contanto no meio acadêmico ou projetos pessoais</p> */}
-        <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
 
-          {skills.map((skills) => (
+        
 
+        <div
+          className="p-4 gap-x-4   "
+        >
 
-            <div
-              key={skills}
-              className="p-6 text-center bg-gray-50 dark:bg-[#1a1a1a] rounded-xl border border-purple-100 dark:border-purple-900/20 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors"
-            >
+          
+          <span className="font-semibold text-xl ">Backend</span>
+          <div className="flex py-2 gap-2">
+            {linguagens.map((linguagem, index) => (
+              <div key={index}>
+                <img
+                  src={`https://skillicons.dev/icons?i=${linguagem}`}
+                  alt={`Ícone de ${linguagem}`}
+                />
+              </div>
+            ))}
+          </div>
 
-              <h3 className="text-xl font-medium">{skills}</h3>
-            </div>
+          <span className="font-semibold text-xl ">Frontend</span>
+          <div className="flex py-2 gap-2">
+            {frameworks.map((framework, index) => (
+              <img
+                key={index}
+                src={`https://skillicons.dev/icons?i=${framework}`}
+                alt={`Ícone de ${framework}`}
+              />
+            ))}
+          </div>
 
-          ))}
-        </div>
-
-       
-       {/* <div className="p-4 rounded-2xl shadow-white bg-gray-800">
-
-       <h1 className="flex justify-center align-middle mb-10 font-bold text-xl">Frameworks</h1>
-        <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
-
-{frameworks.map((frameworks) => (
-
-
-  <div
-    key={frameworks}
-    className="p-6 text-center bg-gray-50 dark:bg-[#1a1a1a] rounded-xl border border-purple-100 dark:border-purple-900/20 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors"
-  >
-
-    <h3 className="text-xl font-medium">{frameworks}</h3>
-  </div>
-
-))}
-</div>
-       </div> */}
-
-      </div>
+          <span className="font-semibold text-xl ">Banco de Dados</span>
+          <div className="flex py-2 gap-2">
+            {bancoDados.map((bancoDados, index) => (
+              <div key={index}>
+                <img
+                  src={`https://skillicons.dev/icons?i=${bancoDados}`}
+                  alt={`Ícone de ${bancoDados}`}
+                />
+              </div>
+            ))}
+          </div>
+        </div>    
+   
+     </div>
     </section>
   )
 }

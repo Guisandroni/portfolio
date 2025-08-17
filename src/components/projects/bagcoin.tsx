@@ -1,8 +1,7 @@
 import { ExternalLink, Github } from "lucide-react";
-import { useLanguage } from "../../contexts/translation/LanguageContext";
 
 export function Bagcoin(){
-            const { t } = useLanguage();
+           
     
     return(
 
@@ -16,8 +15,8 @@ export function Bagcoin(){
           className="object-cover w-1xl h-48 justify-self-center"
         />
         <div className="p-6">
-          <h3 className="mb-2 text-xl font-bold">{t('BagCoin')}</h3>
-          <p className="mb-4 text-gray-600 dark:text-gray-400">{t('DescriptionBagCoin')}</p>
+          <h3 className="mb-2 text-xl font-bold">{'BagCoin'}</h3>
+          <p className="mb-4 text-gray-600 dark:text-gray-400">{'DescriptionBagCoin'}</p>
           <div className="flex gap-4">
             <a
               href="https://bagcoin.vercel.app/" 
@@ -31,7 +30,7 @@ export function Bagcoin(){
               className="flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300"
             >
               <Github  href="https://github.com/Guisandroni/bagcoin" size={20} />
-              {t('repository')}
+              {'repository'}
             </a>
           </div>
         </div>

@@ -1,8 +1,6 @@
 import { Github } from "lucide-react";
-import { useLanguage } from "../../contexts/translation/LanguageContext";
 
 export function Movies(){
-            const { t } = useLanguage();
     
     return(
 
@@ -16,8 +14,8 @@ export function Movies(){
           className="object-cover  justify-self-center"
         />
         <div className="p-6">
-          <h3 className="mb-2 text-xl font-bold">{t('Movie')}</h3>
-          <p className="mb-4 text-gray-600 dark:text-gray-400">{t('DescriptionMovie')}</p>
+          <h3 className="mb-2 text-xl font-bold">{'Movie'}</h3>
+          <p className="mb-4 text-gray-600 dark:text-gray-400">{'DescriptionMovie'}</p>
           <div className="flex gap-4">
          
             <a
@@ -25,7 +23,7 @@ export function Movies(){
               className="flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300"
             >
               <Github  href="https://github.com/Guisandroni/Page-Movie" size={20} />
-              {t('repository')}
+              {'repository'}
             </a>
           </div>
         </div>
