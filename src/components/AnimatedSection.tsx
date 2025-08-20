@@ -7,7 +7,7 @@ interface Props {
 
 export function AnimatedSection({ children }: Props) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const isInView = useInView(ref, { amount: 0.2 });
 
   return (
     <section ref={ref}>

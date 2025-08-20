@@ -15,7 +15,7 @@ function App() {
         <HeroSection />
       </AnimatedSection>
 
-      <div className="flex flex-row gap-40 justify-center">
+      <div className="flex flex-col md:flex-row gap-8 md:gap-40 justify-center">
         <AnimatedSection>
           <Skills />
         </AnimatedSection>

@@ -6,9 +6,9 @@ export function Skills() {
   const bancoDados = ["mysql","postgresql", "mongodb"];
   return (
 
-    <section id="skills" className="py-22 bg-white dark:bg-[#121212]">
+    <section id="skills" className="py-22 bg-white dark:bg-[#121212] scroll-mt-20">
       <div className="container px-6 mx-auto flex-1 ">
-        <h2 className="mb-6 text-4xl font-bold py-2 text-center text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text">
+        <h2 className="mb-6 text-3xl md:text-4xl font-bold py-2 text-center text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text">
           {'Tecnologias'}
         </h2>
 
@@ -20,7 +20,7 @@ export function Skills() {
 
           
           <span className="font-semibold text-xl ">Backend</span>
-          <div className="flex py-2 gap-2">
+          <div className="flex flex-wrap py-2 gap-2">
             {linguagens.map((linguagem, index) => (
               <div key={index}>
                 <img
@@ -32,7 +32,7 @@ export function Skills() {
           </div>
 
           <span className="font-semibold text-xl ">Frontend</span>
-          <div className="flex py-2 gap-2">
+          <div className="flex flex-wrap py-2 gap-2">
             {frameworks.map((framework, index) => (
               <img
                 key={index}
@@ -43,7 +43,7 @@ export function Skills() {
           </div>
 
           <span className="font-semibold text-xl ">Banco de Dados</span>
-          <div className="flex py-2 gap-2">
+          <div className="flex flex-wrap py-2 gap-2">
             {bancoDados.map((bancoDados, index) => (
               <div key={index}>
                 <img

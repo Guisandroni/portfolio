@@ -11,7 +11,7 @@ export function HeroSection() {
 
   return (
     
-    <section id='guisandroni.dev' className="relative flex items-center justify-center min-h-screen py-20 overflow-hidden">
+    <section id='guisandroni.dev' className="relative flex items-center justify-center min-h-screen py-20 overflow-hidden scroll-mt-20">
       <div className="container px-6   mx-auto flex items-center justify-center ">
         <div className="flex flex-col items-center gap-8 md:flex-row md:gap-16">
           <div className="relative group animate-float">
@@ -19,14 +19,14 @@ export function HeroSection() {
             <img
               src="src/assets/profile.jpg"
               alt=""
-              className="relative z-10 object-cover w-54 h-54 border-4  border-purple-500 rounded-full"
+              className="relative z-10 object-cover w-40 h-40 md:w-54 md:h-54 border-4 border-purple-500 rounded-full"
             />
           </div>
           <div className="space-y-6 text-center md:text-left animate-fade-in">
-            <h1 className="text-5xl font-bold text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text">
+            <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text">
               Guilherme Sandroni Dias
             </h1>
-            <p className="text-2xl text-purple-600 dark:text-purple-400">{'Desenvolvedor Junior - FullStack'}</p>
+            <p className="text-xl md:text-2xl text-purple-600 dark:text-purple-400">{'Desenvolvedor Junior - FullStack'}</p>
             <p className="text-gray-600 dark:text-gray-400">{'Análise e Desenvolvimento de Sistemas - Fatec Sorocaba '}</p>
             <div className="flex flex-wrap justify-center gap-4 md:justify-start">
               <button className="flex items-center gap-2 px-6 py-3 cursor-pointer text-white transition-shadow rounded-full bg-gradient-to-r from-purple-600 to-pink-600 hover:shadow-lg hover:shadow-purple-500/20">
