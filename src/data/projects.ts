@@ -1,40 +1,94 @@
+import unknowProjeto from "../assets/imgs/projetosUnknow.jpg";
 export const projects = [
+
   {
-    title: 'TripInvites',
-    description: 'Aplicação para gerenciar e convidar participantes para eventos, construída com Node.js, Fastify e React.',
-    image: 'https://plus.unsplash.com/premium_photo-1684407617181-275e50374e95?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dHJpcHxlbnwwfHwwfHx8MA%3D%3D',
-    repository: 'https://github.com/Guisandroni/TripInvites'
+    title: "Dayli Diet",
+    description:
+      "DailyDiet é um aplicativo mobile para controle de dieta, permitindo registrar e acompanhar suas refeições diárias, mantendo um histórico do que está dentro ou fora da sua dieta.",
+    image: unknowProjeto,
+    repository: "https://github.com/Guisandroni/Dayli_Diet",
+    tech:[
+      "React Native",
+      "Expo",
+      "Nativewind",
+      "Node.js",
+      "PrismaORM",
+      "Fastify"
+    ]
+    
   },
-  {
-    title: 'BagCoin',
-    description: 'Uma carteira digital para gerenciar suas finanças, permitindo controle de despesas e receitas.',
-    image: 'https://github.com/Guisandroni/bagcoin/raw/main/doc/bagcoin.PNG',
-    repository: 'https://github.com/Guisandroni/bagcoin'
-  },
-  {
-    title: 'MarketItems',
-    description: 'API RESTful para gerenciar itens de mercado, desenvolvida com Fastify, TypeScript e Prisma.',
-    image: 'https://github.com/Guisandroni/market-Itens/raw/main/doc/home.PNG',
-    repository: 'https://github.com/Guisandroni/market-Itens',
-    link: 'https://market-itens.vercel.app/'
-  },
-  {
-    title: 'Movie',
-    description: 'Uma página web para explorar filmes, com informações detalhadas e funcionalidades de busca.',
-    image: 'https://github.com/Guisandroni/Page-Movie/raw/main/docs/moviehome.png',
-    repository: 'https://github.com/Guisandroni/Page-Movie'
-  },
-  {
-    title: 'Pomodoro',
-    description: 'Um temporizador Pomodoro para ajudar a gerenciar o tempo de estudo e trabalho de forma eficiente.',
-    image: 'https://github.com/Guisandroni/market-Itens/raw/main/doc/home.PNG',
-    repository: 'https://github.com/Guisandroni/pomodoro-timer/tree/main'
-  },
-  {
-    title: 'Cadastro Pet',
-    description: 'Um sistema para cadastrar e gerenciar animais de estimação, desenvolvido com Node.js, Fastify e React.',
-    image: '',
-    repository: 'https://github.com/Guisandroni/cadastro-pet'
-},
   
+  {
+    title: "BagCoin",
+    description:
+      "Uma carteira digital para gerenciar suas finanças, permitindo controle de despesas e receitas.",
+    image: unknowProjeto,
+    repository: "https://github.com/Guisandroni/bagCoin-mobile",
+    link: "bagcoin.vercel.app",
+    tech:[
+      "React Native",
+      "Expo",
+      "Nativewind",
+      "Node.js",
+      "PrismaORM",
+      "Fastify"
+    ]
+  },
+  {
+    title: "MarketItems",
+    description:
+      "API RESTful para gerenciar itens de mercado, desenvolvida com Fastify, TypeScript e Prisma.",
+    image: unknowProjeto,
+    repository: "https://github.com/Guisandroni/market-Itens",
+    tech:[
+      "Express",
+      "Node.js",
+      "MongoDB",
+      "ChackraUI",
+      "React"
+    ]
+    
+  },
+  {
+    title: "Cadastro Pet",
+    description:
+      "Um sistema para cadastrar e gerenciar animais de estimação, a API foi desenvolvida utilizando Node.js e a biblioteca Fastify para construção do backend, o PrismaORM foi implementado junto do PostgreSQL para poder salvar os dados.",
+    image: unknowProjeto,
+    repository: "https://github.com/Guisandroni/desafioCadastro",
+    tech:[
+      "Fastify",
+      "Node.js",
+      "PrismaORM",
+      "PostgreSQL",
+      "Docker",
+      "Zod"
+    ]
+  },
+  {
+    title: "E-commerce",
+    description:
+      "Projeto com camada de microserviços conecntando o FrontStore com o warehouse do e-commerce, foi desenvolvido utilizando Spring Boot e RabbitMQ",
+    image: unknowProjeto,
+    repository: "https://github.com/Guisandroni/Microservices",
+    tech:[
+      "Java",
+      "Spring Boot",
+      "RabbitMQ",
+      "Docker",
+      "H2"
+    ]
+  },
+  {
+    title: "Movie-Api",
+    description:
+      "API para cadastro de filmes por categoria e streaming",
+    image: unknowProjeto,
+    repository: "https://github.com/Guisandroni/movie_api",
+    tech:[
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "Docker"
+    ]
+  },
 ];

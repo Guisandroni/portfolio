@@ -13,6 +13,7 @@ export function Itens() {
           image={project.image}
           repository={project.repository}
           link={project.link}
+          tech={project.tech}
         />
       ))}
     </div>

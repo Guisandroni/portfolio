@@ -1,5 +1,6 @@
 import { Download, Mail, Github, Linkedin } from 'lucide-react';
-import crc from '../../public/cv/CrcGuilherme.pdf'
+import crc from '../assets/cv/CrcGuilherme.pdf'
+import profile from "../assets/imgs/profile.jpg"
 
 export function HeroSection() {
   const email = "gui.sandroni@gmail.com"
@@ -17,7 +18,7 @@ export function HeroSection() {
           <div className="relative group animate-float">
             <div className="absolute inset-0 transition-opacity rounded-full opacity-75 bg-gradient-to-r group-hover:opacity-100"></div>
             <img
-              src="src/assets/profile.jpg"
+              src={profile}
               alt=""
               className="relative z-10 object-cover w-40 h-40 border-4 border-purple-500 rounded-full md:w-54 md:h-54"
             />
