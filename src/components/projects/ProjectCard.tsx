@@ -6,12 +6,12 @@ interface ProjectCardProps {
   image: string;
   repository: string;
   link?: string;
-  tech?:Array<string>;
+  tech?: Array<string>;
 }
 
 
 
-export function ProjectCard({ title, description, image, repository, link ,tech}: ProjectCardProps) {
+export function ProjectCard({ title, description, image, repository, link, tech }: ProjectCardProps) {
   return (
     <div className="bg-white dark:bg-[#121212] rounded-xl overflow-hidden border border-purple-100 dark:border-purple-900/20 hover:scale-105 transition-all duration-300">
       <img
@@ -24,16 +24,18 @@ export function ProjectCard({ title, description, image, repository, link ,tech}
         <p className="mb-4 text-gray-600 dark:text-gray-400">{description}</p>
         <div className="flex flex-col gap-4">
           <div className="flex gap-2 flex-wrap">
-            {tech?.map((tech?)=>(
+            {tech?.map((tech?) => (
               <button className="bg-purple-600 rounded-4xl py-1 px-3 border-2 border-neutral-200">
-              <p className="font-bold">{tech}</p>
+                <p className="font-bold">{tech}</p>
               </button>
-              
+
             ))}
           </div>
           <div className="flex gap-6">
             <a
               href={repository}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300"
             >
               <Github size={20} />
@@ -42,6 +44,8 @@ export function ProjectCard({ title, description, image, repository, link ,tech}
             {link && (
               <a
                 href={link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300"
               >
                 <Link size={20} />

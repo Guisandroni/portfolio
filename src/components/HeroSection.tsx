@@ -11,7 +11,7 @@ export function HeroSection() {
 
 
   return (
-    
+
     <section id='guisandroni.dev' className="relative flex items-center justify-center min-h-screen py-20 overflow-hidden scroll-mt-20">
       <div className="container flex items-center justify-center px-6 mx-auto ">
         <div className="flex flex-col items-center gap-8 md:flex-row md:gap-16">
@@ -32,7 +32,8 @@ export function HeroSection() {
             <div className="flex flex-wrap justify-center gap-4 md:justify-start">
               <button className="flex items-center gap-2 px-6 py-3 text-white transition-shadow rounded-full cursor-pointer bg-gradient-to-r from-purple-600 to-pink-600 hover:shadow-lg hover:shadow-purple-500/20">
 
-                <a href={crc} download='crc' className='flex gap-2'>
+                <a href={crc} target="_blank"
+                  rel="noopener noreferrer" download='crc' className='flex gap-2'>
                   <Download size={20} />
                   {'Currículo'}
                 </a>
@@ -43,10 +44,16 @@ export function HeroSection() {
               </button>
             </div>
             <div className="flex justify-center gap-4 mt-6 md:justify-start">
-              <a href="https://github.com/Guisandroni" className="p-3 text-purple-600 transition-colors border-2 border-purple-600 rounded-full dark:text-purple-400 hover:bg-purple-600/20">
+              <a href="https://github.com/Guisandroni"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 text-purple-600 transition-colors border-2 border-purple-600 rounded-full dark:text-purple-400 hover:bg-purple-600/20">
                 <Github size={24} />
               </a>
-              <a href="https://www.linkedin.com/in/guisandroni/" className="p-3 text-purple-600 transition-colors border-2 border-purple-600 rounded-full dark:text-purple-400 hover:bg-purple-600/20">
+              <a href="https://www.linkedin.com/in/guisandroni/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 text-purple-600 transition-colors border-2 border-purple-600 rounded-full dark:text-purple-400 hover:bg-purple-600/20">
                 <Linkedin size={24} />
               </a>
 
