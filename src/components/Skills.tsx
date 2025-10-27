@@ -18,8 +18,7 @@ export function Skills() {
           className="p-4 gap-x-4   "
         >
 
-          
-          <span className="font-semibold text-xl ">Backend</span>
+           <span className="font-semibold text-xl ">Backend</span>
           <div className="flex flex-wrap py-2 gap-2">
             {linguagens.map((linguagem, index) => (
               <div key={index}>
