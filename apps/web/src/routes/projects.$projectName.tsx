@@ -10,7 +10,7 @@ import {
   CardTitle
 } from '@/components/ui/card';
 
-export const Route = createFileRoute('/projects/$projectId')({
+export const Route = createFileRoute('/projects/$projectName')({
   component: ProjectDetailComponent
 });
 
@@ -30,7 +30,7 @@ function ProjectDetailComponent() {
               The project you're looking for doesn't exist.
             </p>
             <Button asChild>
-              <Link to="/projects">
+              <Link to="/">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Back to Projects
               </Link>
@@ -44,10 +44,9 @@ function ProjectDetailComponent() {
   return (
     <div className="min-h-screen mt-10 px-4 pb-10">
       <div className="max-w-5xl mx-auto">
-        {/* Header with back button */}
         <div className="mb-8">
           <Button variant="ghost" asChild className="mb-4">
-            <Link to="/projects">
+            <Link to="/">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Projects
             </Link>
@@ -55,8 +54,6 @@ function ProjectDetailComponent() {
           <h1 className="text-5xl font-bold mb-4">{project.title}</h1>
           <p className="text-xl text-muted-foreground">{project.description}</p>
         </div>
-
-        {/* Project Image */}
         <div className="aspect-video w-full overflow-hidden rounded-lg bg-muted mb-8">
           <img
             src={project.image}
@@ -66,9 +63,7 @@ function ProjectDetailComponent() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
-            {/* Objective Section */}
             <Card>
               <CardHeader>
                 <CardTitle>Objective</CardTitle>
@@ -80,7 +75,6 @@ function ProjectDetailComponent() {
               </CardContent>
             </Card>
 
-            {/* Development Section */}
             <Card>
               <CardHeader>
                 <CardTitle>Development Process</CardTitle>
@@ -92,7 +86,6 @@ function ProjectDetailComponent() {
               </CardContent>
             </Card>
 
-            {/* Images Section (placeholder for future implementation) */}
             <Card>
               <CardHeader>
                 <CardTitle>Project Gallery</CardTitle>
@@ -117,9 +110,7 @@ function ProjectDetailComponent() {
             </Card>
           </div>
 
-          {/* Sidebar */}
           <div className="space-y-6">
-            {/* Tech Stack Card */}
             <Card>
               <CardHeader>
                 <CardTitle>Tech Stack</CardTitle>
@@ -139,7 +130,6 @@ function ProjectDetailComponent() {
               </CardContent>
             </Card>
 
-            {/* Links Card */}
             <Card>
               <CardHeader>
                 <CardTitle>Links</CardTitle>

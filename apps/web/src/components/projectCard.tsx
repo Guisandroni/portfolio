@@ -1,95 +1,112 @@
 import { Button } from '@/components/ui/button';
-
+import { projects } from '@/lib/otherProjec';
+import type { Project, Skill } from '@/types';
+import { Link } from '@tanstack/react-router';
 import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
-  CardFooter
-} from '@/components/ui/card';
-import { ExternalLink, Github, ArrowRight } from 'lucide-react';
-import { Link, Navigate } from '@tanstack/react-router';
+  ArrowRight,
+  Github,
+  Linkedin,
+  Mail,
+  Instagram,
+  Terminal,
+  Code,
+  Cpu,
+  ExternalLink
+} from 'lucide-react';
+import { useState } from 'react';
 
-export interface ProjectInterface {
-  id: string;
-  title: string;
-  description: string;
-  repository: string;
-  image: string;
-  development?: string;
-  tech: string[];
-  link?: string;
+interface ProjectsProps {
+  data: Project[];
 }
 
-export const ProjectCard = ({
-  id,
-  title,
-  description,
-  image,
-  repository,
-  tech,
-  development,
-  link
-}: ProjectInterface) => {
+export const ProjectCard = ({ data }: ProjectsProps) => {
+  const [hoveredProject, setHoveredProject] = useState<number>(0);
+
   return (
-    <Card className="flex flex-col overflow-hidden border-0 bg-transparent h-full rounded-none group/card cursor-pointer hover:bg-accent/5 transition-colors">
-      {/*<div className="aspect-video w-full overflow-hidden bg-muted relative">
-          <img src={image} alt={title} className="w-full h-full object-cover transition-transform duration-300 group-hover/card:scale-105" />
-          <div className="absolute inset-0 bg-black/0 group-hover/card:bg-black/10 transition-colors duration-300" />
-        </div>*/}
-      <Link
-        to="/projects/$projectId"
-        params={{ projectId: id }}
-        className="block h-full no-underline"
-      >
-        <CardHeader className="space-y-2">
-          <CardTitle className="text-xl flex items-center justify-between">
-            {title}
-            <ArrowRight className="w-5 h-5 opacity-0 group-hover/card:opacity-100 transition-opacity" />
-          </CardTitle>
-          <CardDescription className="line-clamp-2">
-            {description}
-          </CardDescription>
-        </CardHeader>
+    <Link to="/projects/$projectName" params={{ projectName: name }}>
+      <section className="py-24 bg-black relative">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div className="lg:col-span-7 z-10">
+              <div className="flex items-end gap-4 mb-16 border-b border-[#5a87c5]/30 pb-6">
+                <h2 className="text-4xl md:text-6xl font-archivo uppercase tracking-tighter text-white">
+                  Selected
+                  <br />
+                  <span className="text-[#5a87c5]">Works</span>
+                </h2>
+                <span className="font-mono-space text-xs text-[#b8cce4] tracking-widest uppercase mb-2 ml-auto md:ml-4">
+                  [ Interactive View ]
+                </span>
+              </div>
 
-        <CardContent className="flex-1">
-          <div className="flex flex-wrap gap-2">
-            {tech.slice(0, 4).map((t, idx) => (
-              <span
-                key={idx}
-                className="px-2 py-1 text-xs rounded-md bg-secondary text-secondary-foreground"
-              >
-                {t}
-              </span>
-            ))}
-            {tech.length > 4 && (
-              <span className="px-2 py-1 text-xs rounded-md bg-secondary/50 text-secondary-foreground">
-                +{tech.length - 4}
-              </span>
-            )}
+              {/* Lista de Projetos */}
+              <div className="flex flex-col">
+                {data.map((project, index) => (
+                  <div
+                    key={index}
+                    onMouseEnter={() => setHoveredProject(index)}
+                    className={`group border-b border-[#5a87c5]/20 py-8 cursor-pointer transition-all duration-300 hover:pl-4 hover:border-[#5a87c5] ${hoveredProject === index ? 'bg-[#5a87c5]/5' : ''}`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-baseline gap-6">
+                        <span className="font-mono-space text-[#5a87c5] text-sm font-bold">
+                          0{index + 1}
+                        </span>
+                        <h3
+                          className={`text-2xl md:text-4xl font-archivo uppercase transition-colors duration-300 ${hoveredProject === index ? 'text-white' : 'text-[#b8cce4]'}`}
+                        >
+                          {project.name}
+                        </h3>
+                      </div>
+                      <ArrowRight
+                        className={`w-6 h-6 text-[#5a87c5] transform transition-all duration-300 ${hoveredProject === index ? '-rotate-45 opacity-100' : 'opacity-0'}`}
+                      />
+                    </div>
+
+                    <div className="flex gap-4 mt-3 pl-10">
+                      <span className="text-xs font-mono-space text-[#b8cce4]/80 uppercase tracking-wider border border-[#5a87c5]/30 px-2 py-1 rounded-sm">
+                        {project.year}
+                      </span>
+                      <span className="text-xs font-mono-space text-[#b8cce4]/80 uppercase tracking-wider border border-[#5a87c5]/30 px-2 py-1 rounded-sm">
+                        {project.type}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="hidden lg:block lg:col-span-5 relative">
+              <div className="sticky top-32 w-full aspect-[4/5] border border-[#5a87c5]/30 p-2 bg-[#5a87c5]/5">
+                <div className="w-full h-full relative overflow-hidden bg-black">
+                  {data.map((project, index) => (
+                    <img
+                      key={index}
+                      src={project.image}
+                      alt={project.name}
+                      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out ${hoveredProject === index ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`}
+                      style={{ filter: 'grayscale(100%) contrast(110%)' }}
+                    />
+                  ))}
+
+                  <div className="absolute bottom-0 left-0 w-full bg-black/80 backdrop-blur-sm p-6 border-t border-[#5a87c5]/30">
+                    <div className="flex justify-between items-center">
+                      <span className="font-mono-space text-[#5a87c5] text-xs tracking-widest uppercase">
+                        Preview Mode
+                      </span>
+                      <ExternalLink size={16} className="text-white" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="absolute -top-2 -right-2 w-4 h-4 border-t-2 border-r-2 border-[#5a87c5]"></div>
+                <div className="absolute -bottom-2 -left-2 w-4 h-4 border-b-2 border-l-2 border-[#5a87c5]"></div>
+              </div>
+            </div>
           </div>
-        </CardContent>
-      </Link>
-
-      <CardFooter className="gap-2 mt-auto">
-        <a
-          href={repository}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex-1 "
-        >
-          <Button
-            variant="outline"
-            size="sm"
-            className="w-full hover:cursor-pointer"
-          >
-            <Github className="w-4 h-4 mr-2" />
-            Code
-          </Button>
-        </a>
-      </CardFooter>
-    </Card>
+        </div>
+      </section>
+    </Link>
   );
 };
 export default ProjectCard;
