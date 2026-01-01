@@ -1,4 +1,4 @@
-import type { Skill } from '@/types';
+import type { Skill } from "@/types";
 import {
   ArrowRight,
   Github,
@@ -8,29 +8,29 @@ import {
   Terminal,
   Code,
   Cpu,
-  ExternalLink
-} from 'lucide-react';
+  ExternalLink,
+} from "lucide-react";
 
 const skills: Skill[] = [
- {
-   title: 'FRONTEND',
-   icon: <Terminal size={32} />,
-   desc: 'REACT / NEXT.JS / TAILWIND'
- },
- { title: 'BACKEND', 
- icon: <Code size={32} />,
- desc: 'NODE / PYTHON / GO' 
- },
- { title: 'SYSTEMS',
- icon: <Cpu size={32} />,
- desc: 'DOCKER / AWS / LINUX' 
- }
+  {
+    title: "FRONTEND",
+    icon: <Terminal size={32} />,
+    desc: "REACT / NEXT.JS / TAILWINDCSS / STYLED-COMPONENTS / TANSTACK ",
+  },
+  {
+    title: "BACKEND",
+    icon: <Code size={32} />,
+    desc: "NODE / JAVA / SPRING BOOT / SPRING SECURITY / .NET / C# / BUN ",
+  },
+  {
+    title: "SYSTEMS",
+    icon: <Cpu size={32} />,
+    desc: "DOCKER / AWS / LINUX / TERRAFORM ",
+  },
 ];
 
-export const SkillIssue = () =>{
-  
-  return(
-    
+export const SkillIssue = () => {
+  return (
     <section
       id="skills"
       className="py-32 bg-zinc-950 border-t border-tate-blue/20"
@@ -42,7 +42,7 @@ export const SkillIssue = () =>{
           </h2>
           <div className="h-1 w-20 bg-tate-blue mb-6"></div>
           <p className="text-main font-mono-space text-sm uppercase tracking-widest max-w-md">
-            Ferramentas modernas para soluções complexas.
+            Tools and technology that I have studied and practical knowledge.
           </p>
         </div>
 
@@ -72,5 +72,5 @@ export const SkillIssue = () =>{
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

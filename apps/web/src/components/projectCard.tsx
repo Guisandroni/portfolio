@@ -1,7 +1,7 @@
-import { Button } from '@/components/ui/button';
-import { projects } from '@/lib/otherProjec';
-import type { Project, Skill } from '@/types';
-import { Link } from '@tanstack/react-router';
+import { Button } from "@/components/ui/button";
+import { projects } from "@/lib/otherProjec";
+import type { Project, Skill } from "@/types";
+import { Link } from "@tanstack/react-router";
 import {
   ArrowRight,
   Github,
@@ -11,9 +11,9 @@ import {
   Terminal,
   Code,
   Cpu,
-  ExternalLink
-} from 'lucide-react';
-import { useState } from 'react';
+  ExternalLink,
+} from "lucide-react";
+import { useState } from "react";
 
 interface ProjectsProps {
   data: Project[];
@@ -32,11 +32,8 @@ export const ProjectCard = ({ data }: ProjectsProps) => {
                 <h2 className="text-4xl md:text-6xl font-archivo uppercase tracking-tighter text-white">
                   Selected
                   <br />
-                  <span className="text-[#5a87c5]">Works</span>
+                  <span className="text-[#5a87c5]">Projects</span>
                 </h2>
-                <span className="font-mono-space text-xs text-[#b8cce4] tracking-widest uppercase mb-2 ml-auto md:ml-4">
-                  [ Interactive View ]
-                </span>
               </div>
 
               {/* Lista de Projetos */}
@@ -45,7 +42,7 @@ export const ProjectCard = ({ data }: ProjectsProps) => {
                   <div
                     key={index}
                     onMouseEnter={() => setHoveredProject(index)}
-                    className={`group border-b border-[#5a87c5]/20 py-8 cursor-pointer transition-all duration-300 hover:pl-4 hover:border-[#5a87c5] ${hoveredProject === index ? 'bg-[#5a87c5]/5' : ''}`}
+                    className={`group border-b border-[#5a87c5]/20 py-8 cursor-pointer transition-all duration-300 hover:pl-4 hover:border-[#5a87c5] ${hoveredProject === index ? "bg-[#5a87c5]/5" : ""}`}
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-baseline gap-6">
@@ -53,13 +50,13 @@ export const ProjectCard = ({ data }: ProjectsProps) => {
                           0{index + 1}
                         </span>
                         <h3
-                          className={`text-2xl md:text-4xl font-archivo uppercase transition-colors duration-300 ${hoveredProject === index ? 'text-white' : 'text-[#b8cce4]'}`}
+                          className={`text-2xl md:text-4xl font-archivo uppercase transition-colors duration-300 ${hoveredProject === index ? "text-white" : "text-[#b8cce4]"}`}
                         >
                           {project.name}
                         </h3>
                       </div>
                       <ArrowRight
-                        className={`w-6 h-6 text-[#5a87c5] transform transition-all duration-300 ${hoveredProject === index ? '-rotate-45 opacity-100' : 'opacity-0'}`}
+                        className={`w-6 h-6 text-[#5a87c5] transform transition-all duration-300 ${hoveredProject === index ? "-rotate-45 opacity-100" : "opacity-0"}`}
                       />
                     </div>
 
@@ -84,8 +81,8 @@ export const ProjectCard = ({ data }: ProjectsProps) => {
                       key={index}
                       src={project.image}
                       alt={project.name}
-                      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out ${hoveredProject === index ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`}
-                      style={{ filter: 'grayscale(100%) contrast(110%)' }}
+                      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out ${hoveredProject === index ? "opacity-100 scale-100" : "opacity-0 scale-105"}`}
+                      style={{ filter: "grayscale(100%) contrast(110%)" }}
                     />
                   ))}
 
