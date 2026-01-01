@@ -22,8 +22,7 @@ const Portfolio = () => {
   return (
     <div className="container mx-auto min-h-screen bg-black text-main  font-sans selection:bg-tate-blue  selection:text-black ">
       <Hero />
-      <About />
-      <WorkExperience />
+
       <ProjectCard data={projects} />
       <SkillIssue />
       <Footer />
