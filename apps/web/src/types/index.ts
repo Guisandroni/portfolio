@@ -13,3 +13,10 @@ export interface Skill {
   icon: React.ReactNode;
   desc: string;
 }
+
+export interface WorkExperience {
+  company: string;
+  position: string;
+  duration: string;
+  description?: string;
+}

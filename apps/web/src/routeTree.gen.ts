@@ -10,18 +10,12 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as BlogRouteImport } from './routes/blog'
-import { Route as BioRouteImport } from './routes/bio'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProjectsProjectNameRouteImport } from './routes/projects.$projectName'
 
 const BlogRoute = BlogRouteImport.update({
   id: '/blog',
   path: '/blog',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BioRoute = BioRouteImport.update({
-  id: '/bio',
-  path: '/bio',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -37,34 +31,30 @@ const ProjectsProjectNameRoute = ProjectsProjectNameRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/bio': typeof BioRoute
   '/blog': typeof BlogRoute
   '/projects/$projectName': typeof ProjectsProjectNameRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/bio': typeof BioRoute
   '/blog': typeof BlogRoute
   '/projects/$projectName': typeof ProjectsProjectNameRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/bio': typeof BioRoute
   '/blog': typeof BlogRoute
   '/projects/$projectName': typeof ProjectsProjectNameRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/bio' | '/blog' | '/projects/$projectName'
+  fullPaths: '/' | '/blog' | '/projects/$projectName'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/bio' | '/blog' | '/projects/$projectName'
-  id: '__root__' | '/' | '/bio' | '/blog' | '/projects/$projectName'
+  to: '/' | '/blog' | '/projects/$projectName'
+  id: '__root__' | '/' | '/blog' | '/projects/$projectName'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  BioRoute: typeof BioRoute
   BlogRoute: typeof BlogRoute
   ProjectsProjectNameRoute: typeof ProjectsProjectNameRoute
 }
@@ -76,13 +66,6 @@ declare module '@tanstack/react-router' {
       path: '/blog'
       fullPath: '/blog'
       preLoaderRoute: typeof BlogRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/bio': {
-      id: '/bio'
-      path: '/bio'
-      fullPath: '/bio'
-      preLoaderRoute: typeof BioRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -104,7 +87,6 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  BioRoute: BioRoute,
   BlogRoute: BlogRoute,
   ProjectsProjectNameRoute: ProjectsProjectNameRoute,
 }

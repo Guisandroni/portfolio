@@ -1,65 +1,36 @@
-import type { Project, Skill } from "@/types";
-import {
-  ArrowRight,
-  Github,
-  Linkedin,
-  Mail,
-  Instagram,
-  Terminal,
-  Code,
-  Cpu,
-  ExternalLink
-} from 'lucide-react';
+import type { Project } from "@/types";
 
-  export const projects: Project[] = [
-   {
-     year: '2025',
-     name: 'NEURAL ENGINE',
-     type: 'AI SYSTEM',
-     link: '#',
-     image:
-       'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1000&auto=format&fit=crop'
-   },
-   {
-     year: '2024',
-     name: 'OBSIDIAN DASH',
-     type: 'SAAS PLATFORM',
-     link: '#',
-     image:
-       'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop'
-   },
-   {
-     year: '2024',
-     name: 'VELOCITY',
-     type: 'ECOMMERCE',
-     link: '#',
-     image:
-       'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000&auto=format&fit=crop'
-   },
-   {
-     year: '2023',
-     name: 'DARK MODE UI',
-     type: 'DESIGN SYSTEM',
-     link: '#',
-     image:
-       'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000&auto=format&fit=crop'
-   },
-   {
-     year: '2023',
-     name: 'SYNTHWAVE',
-     type: 'AUDIO VISUALIZER',
-     link: '#',
-     image:
-       'https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=1000&auto=format&fit=crop'
-   },
-   {
-     year: '2022',
-     name: 'PROTOCOL X',
-     type: 'BLOCKCHAIN',
-     link: '#',
-     image:
-       'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1000&auto=format&fit=crop'
-   }
- ];
-
- 
+export const projects: Project[] = [
+  {
+    year: "2024",
+    name: "DAILY DIET",
+    type: "MOBILE APP",
+    link: "daily-diet",
+    image:
+      "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1000&auto=format&fit=crop",
+  },
+  {
+    year: "2024",
+    name: "BAGCOIN",
+    type: "MOBILE APP",
+    link: "bagcoin",
+    image:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1000&auto=format&fit=crop",
+  },
+  {
+    year: "2024",
+    name: "MOVIE API",
+    type: "REST API",
+    link: "movie-api",
+    image:
+      "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1000&auto=format&fit=crop",
+  },
+  {
+    year: "2024",
+    name: "PET REGISTRATION",
+    type: "REST API",
+    link: "pet-registration",
+    image:
+      "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=1000&auto=format&fit=crop",
+  },
+];

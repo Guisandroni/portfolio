@@ -1,40 +1,33 @@
-import { createFileRoute, Link, useNavigate } from '@tanstack/react-router';
-import { projects } from '@/lib/project_data';
-import { Button } from '@/components/ui/button';
-import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle
-} from '@/components/ui/card';
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { projects } from "@/lib/project_data";
+import { ArrowLeft, ExternalLink, Github } from "lucide-react";
 
-export const Route = createFileRoute('/projects/$projectName')({
-  component: ProjectDetailComponent
+export const Route = createFileRoute("/projects/$projectName")({
+  component: ProjectDetailComponent,
 });
 
 function ProjectDetailComponent() {
-  const { projectId } = Route.useParams();
-  const navigate = useNavigate();
-  
-  const project = projects.find((p) => p.id === projectId);
+  const { projectName } = Route.useParams();
+  const project = projects.find((p) => p.id === projectName);
 
   if (!project) {
     return (
-      <div className="min-h-screen mt-10 px-4 pb-10">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center py-20">
-            <h1 className="text-4xl font-bold mb-4">Project Not Found</h1>
-            <p className="text-muted-foreground mb-8">
+      <div className="container mx-auto min-h-screen bg-black text-main font-sans selection:bg-tate-blue selection:text-black">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center py-32">
+            <h1 className="text-4xl md:text-6xl font-archivo uppercase tracking-tighter text-white mb-6">
+              Project Not Found
+            </h1>
+            <p className="text-main font-mono-space text-sm mb-8 max-w-md mx-auto">
               The project you're looking for doesn't exist.
             </p>
-            <Button asChild>
-              <Link to="/">
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to Projects
-              </Link>
-            </Button>
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-tate-blue/50 text-tate-blue font-archivo uppercase tracking-widest text-sm hover:bg-tate-blue/10 transition-colors duration-300"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Back to Projects
+            </Link>
           </div>
         </div>
       </div>
@@ -42,124 +35,140 @@ function ProjectDetailComponent() {
   }
 
   return (
-    <div className="min-h-screen mt-10 px-4 pb-10">
-      <div className="max-w-5xl mx-auto">
-        <div className="mb-8">
-          <Button variant="ghost" asChild className="mb-4">
-            <Link to="/">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Projects
-            </Link>
-          </Button>
-          <h1 className="text-5xl font-bold mb-4">{project.title}</h1>
-          <p className="text-xl text-muted-foreground">{project.description}</p>
-        </div>
-        <div className="aspect-video w-full overflow-hidden rounded-lg bg-muted mb-8">
-          <img
-            src={project.image}
-            alt={project.title}
-            className="w-full h-full object-cover"
-          />
-        </div>
+    <div className="container mx-auto min-h-screen bg-black text-main font-sans selection:bg-tate-blue selection:text-black">
+      <div className="max-w-6xl mx-auto px-6">
+        <section className="py-24 border-b border-tate-blue/20">
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 text-tate-blue font-mono-space text-xs uppercase tracking-widest mb-8 hover:text-white transition-colors duration-300"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Back to Projects
+          </Link>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2 space-y-8">
-            <Card>
-              <CardHeader>
-                <CardTitle>Objective</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
+          <div className="space-y-6">
+            <div className="inline-block relative px-3 py-1 border border-tate-blue/50 bg-tate-blue/10 backdrop-blur-sm">
+              <p className="text-tate-blue font-mono-space text-xs font-bold tracking-widest uppercase">
+                ● {project.tech[0]} Project
+              </p>
+            </div>
+
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-archivo uppercase tracking-tighter leading-[0.85] text-white">
+              {project.title}
+            </h1>
+
+            <p className="text-main max-w-3xl text-base font-mono-space leading-relaxed tracking-wide border-l-2 border-tate-blue pl-6">
+              {project.description}
+            </p>
+          </div>
+        </section>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 py-24">
+          <div className="lg:col-span-8 space-y-16">
+            <section>
+              <div className="flex items-end gap-4 mb-8 border-b border-tate-blue/30 pb-4">
+                <h2 className="text-3xl md:text-4xl font-archivo uppercase tracking-tighter text-white">
+                  Objective
+                </h2>
+              </div>
+              <div className="bg-black border border-tate-blue/20 p-8 hover:border-tate-blue transition-all duration-300">
+                <p className="text-main font-mono-space text-sm leading-relaxed tracking-wide">
                   {project.description}
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </section>
 
-            <Card>
-              <CardHeader>
-                <CardTitle>Development Process</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
+            <section>
+              <div className="flex items-end gap-4 mb-8 border-b border-tate-blue/30 pb-4">
+                <h2 className="text-3xl md:text-4xl font-archivo uppercase tracking-tighter text-white">
+                  Development
+                  <br />
+                  <span className="text-tate-blue">Process</span>
+                </h2>
+              </div>
+              <div className="bg-black border border-tate-blue/20 p-8 hover:border-tate-blue transition-all duration-300">
+                <p className="text-main font-mono-space text-sm leading-relaxed tracking-wide">
                   {project.development}
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </section>
 
-            <Card>
-              <CardHeader>
-                <CardTitle>Project Gallery</CardTitle>
-                <CardDescription>
-                  Screenshots and visual demonstration of the project
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
-                    <span className="text-muted-foreground text-sm">
-                      Screenshot 1
-                    </span>
-                  </div>
-                  <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
-                    <span className="text-muted-foreground text-sm">
-                      Screenshot 2
+            <section>
+              <div className="flex items-end gap-4 mb-8 border-b border-tate-blue/30 pb-4">
+                <h2 className="text-3xl md:text-4xl font-archivo uppercase tracking-tighter text-white">
+                  Project
+                  <br />
+                  <span className="text-tate-blue">Gallery</span>
+                </h2>
+              </div>
+              <div className="bg-black border border-tate-blue/20 p-2 hover:border-tate-blue transition-all duration-300">
+                <div className="w-full aspect-video relative overflow-hidden bg-black">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                    style={{ filter: "grayscale(100%) contrast(110%)" }}
+                  />
+                  <div className="absolute bottom-0 left-0 w-full bg-black/80 backdrop-blur-sm p-4 border-t border-tate-blue/30">
+                    <span className="font-mono-space text-tate-blue text-xs tracking-widest uppercase">
+                      Preview Mode
                     </span>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </section>
           </div>
 
-          <div className="space-y-6">
-            <Card>
-              <CardHeader>
-                <CardTitle>Tech Stack</CardTitle>
-                <CardDescription>Technologies used in this project</CardDescription>
-              </CardHeader>
-              <CardContent>
+          <div className="lg:col-span-4 space-y-8">
+            <section>
+              <div className="flex items-end gap-4 mb-6 border-b border-tate-blue/30 pb-4">
+                <h3 className="text-xl font-archivo uppercase tracking-tighter text-white">
+                  Tech Stack
+                </h3>
+              </div>
+              <div className="bg-black border border-tate-blue/20 p-6 hover:border-tate-blue transition-all duration-300">
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1.5 text-sm rounded-md bg-secondary text-secondary-foreground font-medium"
+                      className="px-3 py-1.5 text-xs font-mono-space uppercase tracking-wider border border-tate-blue/30 text-tate-blue hover:bg-tate-blue/10 hover:border-tate-blue transition-all duration-300"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </section>
 
-            <Card>
-              <CardHeader>
-                <CardTitle>Links</CardTitle>
-                <CardDescription>Project resources and demos</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <Button variant="outline" className="w-full justify-start" asChild>
+            <section>
+              <div className="flex items-end gap-4 mb-6 border-b border-tate-blue/30 pb-4">
+                <h3 className="text-xl font-archivo uppercase tracking-tighter text-white">
+                  Links
+                </h3>
+              </div>
+              <div className="bg-black border border-tate-blue/20 p-6 hover:border-tate-blue transition-all duration-300 space-y-3">
+                <a
+                  href={project.repository}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 w-full px-4 py-3 border border-tate-blue/50 text-tate-blue font-archivo uppercase tracking-widest text-xs hover:bg-tate-blue hover:text-black transition-all duration-300"
+                >
+                  <Github className="w-4 h-4" />
+                  View Source Code
+                </a>
+                {project.link && (
                   <a
-                    href={project.repository}
+                    href={`https://${project.link}`}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="flex items-center gap-3 w-full px-4 py-3 bg-tate-blue text-black font-archivo uppercase tracking-widest text-xs hover:bg-white transition-all duration-300"
                   >
-                    <Github className="w-4 h-4 mr-2" />
-                    View Source Code
+                    <ExternalLink className="w-4 h-4" />
+                    Live Demo
                   </a>
-                </Button>
-                {project.link && (
-                  <Button className="w-full justify-start" asChild>
-                    <a
-                      href={`https://${project.link}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Live Demo
-                    </a>
-                  </Button>
                 )}
-              </CardContent>
-            </Card>
+              </div>
+            </section>
           </div>
         </div>
       </div>

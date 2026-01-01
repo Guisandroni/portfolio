@@ -1,16 +1,16 @@
-import Header from '@/components/header';
-import Loader from '@/components/loader';
-import { ThemeProvider } from '@/components/theme-provider';
-import { Toaster } from '@/components/ui/sonner';
+import Header from "@/components/header";
+import Loader from "@/components/loader";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/sonner";
 import {
   HeadContent,
   Outlet,
   createRootRouteWithContext,
   useRouter,
-  useRouterState
-} from '@tanstack/react-router';
-import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
-import '../index.css';
+  useRouterState,
+} from "@tanstack/react-router";
+import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
+import "../index.css";
 
 export interface RouterAppContext {}
 
@@ -19,30 +19,30 @@ export const Route = createRootRouteWithContext<RouterAppContext>()({
   head: () => ({
     meta: [
       {
-        title: 'portfolio-blog'
+        title: "guisandroni.dev",
       },
       {
-        name: 'description',
-        content: 'portfolio-blog is a web application'
-      }
+        name: "description",
+        content: "Is my personal website",
+      },
     ],
     links: [
       {
-        rel: 'icon',
-        href: '/favicon.ico'
-      }
-    ]
-  })
+        rel: "icon",
+        href: "/https://github.com/guisandroni.png",
+      },
+    ],
+  }),
 });
 
 function RootComponent() {
   const isFetching = useRouterState({
-    select: (s) => s.isLoading
+    select: (s) => s.isLoading,
   });
 
   const router = useRouter();
   const currentRoute = router.state.location.pathname;
-  const isHome = currentRoute === '/';
+  const isHome = currentRoute === "/";
 
   return (
     <>
@@ -55,7 +55,6 @@ function RootComponent() {
       >
         <div className="min-h-screen flex justify-center items-center  ">
           <div className="grid grid-rows-[auto_1fr] h-svh  max-w-7xl w-full">
-            {!isHome && <Header />}
             {isFetching ? <Loader /> : <Outlet />}
           </div>
         </div>

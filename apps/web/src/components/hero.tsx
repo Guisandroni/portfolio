@@ -1,4 +1,6 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { Social } from "./Social";
+import { Link } from "@tanstack/react-router";
 
 export const Hero = () => {
   return (
@@ -34,13 +36,16 @@ export const Hero = () => {
             <span className="inline-flex align-middle px-2">🇧🇷</span>
             <span className="font-semibold">Brazil</span>
           </p>
+
+          <Social />
+
           <div className="flex flex-col sm:flex-row gap-6 pt-4">
-            <a
-              href="#projetos"
+            <Link
+              to="/blog"
               className="px-8 py-4 bg-[#5a87c5] text-black font-archivo uppercase tracking-widest text-sm hover:bg-white transition-colors duration-300 flex items-center justify-center gap-2"
             >
               See my Blog <ArrowRight size={16} />
-            </a>
+            </Link>
             <a
               href="#contato"
               className="px-8 py-4 border border-[#5a87c5] text-[#5a87c5] font-archivo uppercase tracking-widest text-sm hover:bg-[#5a87c5]/10 transition-colors duration-300 flex items-center justify-center"
